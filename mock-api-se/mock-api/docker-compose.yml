@@ -1,0 +1,20 @@
+# =============================================================================
+# Docker Compose — Mock API Industrial Dashboard
+# =============================================================================
+
+services:
+  mock-api:
+    build: .
+    container_name: mock-api
+    ports:
+      - "3000:3000"
+    environment:
+      - PORT=3000
+      - NODE_ENV=production
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "wget", "--no-verbose", "--tries=1", "--spider", "http://localhost:3000/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 5s

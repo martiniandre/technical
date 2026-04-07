@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+@import 'tailwindcss';
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+@import "@fontsource-variable/geist";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme {
+  --font-heading: var(--font-sans);
+  --font-sans: 'Geist Variable', 'Inter', sans-serif;
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+
+  --color-popover: var(--card);
+  --color-popover-foreground: var(--card-foreground);
+
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+
+  --color-secondary: var(--muted);
+  --color-secondary-foreground: var(--muted-foreground);
+
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+
+  --color-theme-1: var(--background);
+  --color-theme-1-hover: #333353;
+  --color-theme-comp-1: var(--card);
+  --color-theme-primary: var(--primary);
+  --color-theme-primary-hover: #00FFB9;
+  --color-theme-primary-active: #00E5AA;
+  --color-theme-comp-5: var(--border);
+
+  --color-theme-dynamic: #00FFB9;
+  --color-theme-dynamic-hover: #62EEC7;
+  --color-theme-dynamic-alt: #00FFB9;
+}
+
+@layer base {
+
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  html {
+    @apply font-sans;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    margin: 0;
+    color: #ffffff;
+    @apply bg-background text-foreground;
+  }
+
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 3px;
+
+    &:hover {
+      background: rgba(255, 255, 255, 0.2);
+    }
+  }
+
+  * {
+    @apply border-border outline-ring/50;
+  }
+}
+
+@utility text-muted-sm {
+  @apply text-[11px] font-medium text-white/40;
+}
+
+:root {
+  --background: #000028;
+  --foreground: oklch(0.985 0 0);
+
+  --card: #1A254D;
+  --card-foreground: oklch(0.985 0 0);
+
+  --primary: #00CCCC;
+  --primary-foreground: #000028;
+
+  --muted: rgba(255, 255, 255, 0.04);
+  --muted-foreground: oklch(0.708 0 0);
+
+  --accent: rgba(255, 255, 255, 0.08);
+  --accent-foreground: oklch(0.985 0 0);
+
+  --destructive: oklch(0.577 0.245 27.325);
+
+  --border: rgba(255, 255, 255, 0.04);
+  --input: rgba(255, 255, 255, 0.08);
+  --ring: #00CCCC;
+
+  --radius: 0.625rem;
+
+  --sidebar: #1A254D;
+  --sidebar-foreground: oklch(0.985 0 0);
+  --sidebar-primary: #00CCCC;
+  --sidebar-primary-foreground: #000028;
+  --sidebar-accent: rgba(255, 255, 255, 0.08);
+  --sidebar-accent-foreground: oklch(0.985 0 0);
+  --sidebar-border: rgba(255, 255, 255, 0.04);
+  --sidebar-ring: #00CCCC;
+}

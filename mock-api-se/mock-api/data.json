@@ -1,0 +1,65 @@
+{
+  "plantInfo": {
+    "name": "Greenfield Plant",
+    "author": "Process Safety Team",
+    "createdAt": "2025-06-15T10:30:00Z",
+    "description": "Industrial monitoring dashboard for Greenfield Plant operations"
+  },
+
+  "equipments": [
+    { "type": "Vessel Vertical", "count": 6 },
+    { "type": "Vessel Horizontal", "count": 5 },
+    { "type": "Column", "count": 3 },
+    { "type": "Tank Vertical", "count": 4 },
+    { "type": "Control Valve", "count": 4 },
+    { "type": "Pump Centrifugal", "count": 3 },
+    { "type": "Other", "count": 3 }
+  ],
+
+  "reliefDevices": [
+    { "type": "Conventional", "count": 12 },
+    { "type": "Balanced Bellows", "count": 8 },
+    { "type": "Pilot Operated", "count": 5 },
+    { "type": "Rupture Disk", "count": 6 },
+    { "type": "Temperature Actuated", "count": 3 },
+    { "type": "Other", "count": 2 }
+  ],
+
+  "sizingCalculationTypes": [
+    { "name": "Vapor", "value": 78 },
+    { "name": "2 Phase", "value": 45 },
+    { "name": "Liquid", "value": 62 },
+    { "name": "Integral Sizing", "value": 38 },
+    { "name": "Low Pressure Tank", "value": 29 },
+    { "name": "Other", "value": 25 }
+  ],
+
+  "scenarios": [
+    { "type": "Non-rate dependent", "count": 142 },
+    { "type": "Rate dependent", "count": 98 }
+  ],
+
+  "users": [
+    {
+      "id": 1,
+      "username": "admin",
+      "password": "admin123",
+      "name": "Admin User",
+      "role": "administrator"
+    },
+    {
+      "id": 2,
+      "username": "engineer",
+      "password": "eng456",
+      "name": "John Engineer",
+      "role": "engineer"
+    },
+    {
+      "id": 3,
+      "username": "viewer",
+      "password": "view789",
+      "name": "Jane Viewer",
+      "role": "viewer"
+    }
+  ]
+}
